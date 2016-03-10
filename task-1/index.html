@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        header {
+            padding-top: 15px;
+            height: 100px;
+            background-color: #FFE759;
+            text-align: center;
+            font: 1.8em Arial, Helvetica, sans-serif;
+            color: #FFFFFF;
+        }
+        header span {
+            font-family: Tahoma, sans-serif;
+            color: #E61400;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: space-around;
+        }
+        main :nth-child(1) {order: 1}
+        main :nth-child(2) {order: 2}
+        main :nth-child(3) {order: 3}
+        main :nth-child(4) {order: 4}
+        main :nth-child(6) {order: 6}
+        main :nth-child(7) {order: 7}
+        hr {
+            margin: 10px 0;
+            border: 0;
+            border-bottom: 3px dashed #E61400;
+        }
+        .person {
+            align-self: flex-end;
+            width: 450px;
+            margin: auto;
+            order: 5;
+        }
+        .cloud {
+            align-self: flex-start;
+            width: 450px;
+            padding: 70px 30px;
+            margin: 1em auto 60px;
+            position: relative;
+            text-align: center;
+            background-color: #fff;
+            border: 10px solid #FFE759;
+            border-radius: 240px / 140px;
+        }
+        .cloud:before {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            bottom: -40px;
+            right: 50%;
+            width: 50px;
+            height: 30px;
+            border-style: solid;
+            border-width: 0 10px 10px 0;
+            border-color: #FFE759;
+            margin-right: -10px;
+            background: transparent;
+            border-bottom-right-radius: 80px 50px;
+            display: block;
+        }
+        .cloud:after {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            bottom: -40px;
+            right: 50%;
+            width: 20px;
+            height: 31px;
+            border-style: solid;
+            border-width: 0 10px 10px 0;
+            border-color: #FFE759;
+            margin-right: 20px;
+            background: transparent;
+            border-bottom-right-radius: 40px 50px;
+            display: block;
+
+        }
+        .cloud p {
+            margin: 0;
+            font-size: 2em;
+        }
+        .cloud :first-child{
+            font-weight: 600;
+        }
+        .cloud > :last-child:before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: -40px;
+            right: 50%;
+            width: 10px;
+            height: 10px;
+            margin-right: 45px;
+            background: #FFE759;
+            border-radius: 10px;
+        }
+        .cloud > :last-child:after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            bottom: -10px;
+            right: 50%;
+            width: 30px;
+            height: 15px;
+            background: #fff;
+        }
+        @media (max-width: 916px){
+            .person {order: 0;}
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Кто <span>Я</span>?</h2>
+    </header>
+    <main>
+
+        <div class="cloud">1
+            <p>Ваше имя:</p>
+            <hr/>
+            <p>Привет! Меня зовут Виталий.</p>
+        </div>
+
+        <div class="cloud">2
+            <p>Дата рождения:</p>
+            <hr/>
+            <p>Я родился 18 июня и мне 25.</p>
+        </div>
+
+        <div class="cloud">3
+            <p>Место проживания:</p>
+            <hr/>
+            <p>Живу в Минске.</p>
+        </div>
+        <div class="cloud">4
+            <p>Какое у вас образование?</p>
+            <hr/>
+            <p>Имею среднее специальное образование.</p>
+        </div>
+        <svg class="person" width="400" height="400">
+            <g>
+                <path stroke="#E61400" d="m269.041122,146.744228c0,0 12.212068,-52.826836 0,-70.721739c-12.226452,-17.894903 -17.102649,-29.814804 -43.98646,-38.34837s-17.088265,-6.832873 -36.636205,-5.959951c-19.54794,0.857872 -35.845081,11.919901 -35.845081,17.879852c0,0 -12.212068,0.857872 -17.088265,5.975001c-4.890581,5.117129 -13.03196,28.956932 -13.03196,34.931933s4.070689,46.024064 8.141379,54.542579l-4.847429,1.700693c-4.070689,49.4104 16.282758,55.385401 16.282758,55.385401c7.321487,46.024064 14.657359,26.428468 14.657359,38.34837s-7.335871,7.675694 -7.335871,7.675694s-6.501596,18.737724 -22.784354,25.555546c-16.282758,6.802772 -106.672201,43.435399 -114.022456,51.111093c-7.350255,7.690745 -6.51598,43.465499 -6.51598,43.465499l387.607308,0c0,0 0.84866,-35.774755 -6.501596,-43.465499c-7.36464,-7.690745 -97.754083,-44.308321 -114.03684,-51.111093c-16.282758,-6.817822 -22.784354,-25.555546 -22.784354,-25.555546s-7.335871,4.244207 -7.335871,-7.675694s7.335871,7.675694 14.671743,-38.34837c0,0 20.339063,-5.975001 16.282758,-55.385401l-4.890581,0z" stroke-width="6" fill="#ffe759">
+                </path>
+            </g>
+        </svg>
+        <div class="cloud">6
+            <p>Кем работали?</p>
+            <hr/>
+            <p>Работал 6 лет по специальности, но по состаянию здоровья, вынужден был сменть деятельность.</p>
+            <p>С малых лет увлекался компьютерами и видеоиграми. Поэтому начал заниматься программированием.</p>
+        </div>
+        <div class="cloud">7
+            <p>Какой у вас опыт веб-разработки?</p>
+            <hr/>
+            <p>Уже чуть более полугода изучаю HTML, CSS и JavaScript. Так как опыт работы у меня довольно скудный портфолио у меня... как бы отсутствует. Да и знаний в области дизайна ещё маловато.</p>
+            <p>Но этих знаний хватило, чтобы попытаться поступить в ШРИ и решить задания.(Может и неправильно. :D )</p>
+            <p>Надеюсь ШРИ поможет мне развиться в сфере грамотного написания кода, упорядочить и объективно оценить мои способности в данной деятельности.</p>
+            <p>На этом у меня всё. Надеюсь, я не потратил Ваше время впустую.</p>
+            <p>Благодарю за внимание.</p>
+        </div>
+   </main>
+</body>
+</html>

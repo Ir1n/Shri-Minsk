@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Junky camera</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="section">
+        <div class="camera">
+            <canvas class="camera__canvas"></canvas>
+            <video autoplay class="camera__video"></video>
+        </div>
+        <div class="controls">
+            <select class="controls__filter">
+                <option value="invert" >Инвертировать</option>
+                <option value="grayscale">Оттенки серого</option>
+                <option value="threshold">Черно-белый</option>
+                <option value="sepia" selected="selected">Сепия</option>
+            </select>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
