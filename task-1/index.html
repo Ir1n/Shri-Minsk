@@ -9,9 +9,11 @@
             margin: 0;
             padding: 0;
         }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
         }
+
         header {
             padding-top: 15px;
             height: 100px;
@@ -20,33 +22,39 @@
             font: 1.8em Arial, Helvetica, sans-serif;
             color: #FFFFFF;
         }
+
         header span {
             font-family: Tahoma, sans-serif;
             color: #E61400;
         }
+
         main {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             align-content: space-around;
         }
+
         main :nth-child(1) {order: 1}
         main :nth-child(2) {order: 2}
         main :nth-child(3) {order: 3}
         main :nth-child(4) {order: 4}
         main :nth-child(6) {order: 6}
         main :nth-child(7) {order: 7}
+
         hr {
             margin: 10px 0;
             border: 0;
             border-bottom: 3px dashed #E61400;
         }
+
         .person {
             align-self: flex-end;
             width: 450px;
             margin: auto;
             order: 5;
         }
+
         .cloud {
             align-self: flex-start;
             width: 450px;
@@ -58,6 +66,7 @@
             border: 10px solid #FFE759;
             border-radius: 240px / 140px;
         }
+
         .cloud:before {
             content: '';
             position: absolute;
@@ -74,6 +83,7 @@
             border-bottom-right-radius: 80px 50px;
             display: block;
         }
+
         .cloud:after {
             content: '';
             position: absolute;
@@ -91,13 +101,16 @@
             display: block;
 
         }
+
         .cloud p {
             margin: 0;
             font-size: 2em;
         }
+
         .cloud :first-child{
             font-weight: 600;
         }
+
         .cloud > :last-child:before {
             content: "";
             position: absolute;
@@ -110,6 +123,7 @@
             background: #FFE759;
             border-radius: 10px;
         }
+
         .cloud > :last-child:after {
             content: "";
             position: absolute;
@@ -120,7 +134,9 @@
             height: 15px;
             background: #fff;
         }
+
         @media (max-width: 916px){
+            
             .person {order: 0;}
 
         }
@@ -132,24 +148,24 @@
     </header>
     <main>
 
-        <div class="cloud">1
+        <div class="cloud">
             <p>Ваше имя:</p>
             <hr/>
             <p>Привет! Меня зовут Виталий.</p>
         </div>
 
-        <div class="cloud">2
+        <div class="cloud">
             <p>Дата рождения:</p>
             <hr/>
             <p>Я родился 18 июня и мне 25.</p>
         </div>
 
-        <div class="cloud">3
+        <div class="cloud">
             <p>Место проживания:</p>
             <hr/>
             <p>Живу в Минске.</p>
         </div>
-        <div class="cloud">4
+        <div class="cloud">
             <p>Какое у вас образование?</p>
             <hr/>
             <p>Имею среднее специальное образование.</p>
@@ -160,13 +176,13 @@
                 </path>
             </g>
         </svg>
-        <div class="cloud">6
+        <div class="cloud">
             <p>Кем работали?</p>
             <hr/>
             <p>Работал 6 лет по специальности, но по состаянию здоровья, вынужден был сменть деятельность.</p>
             <p>С малых лет увлекался компьютерами и видеоиграми. Поэтому начал заниматься программированием.</p>
         </div>
-        <div class="cloud">7
+        <div class="cloud">
             <p>Какой у вас опыт веб-разработки?</p>
             <hr/>
             <p>Уже чуть более полугода изучаю HTML, CSS и JavaScript. Так как опыт работы у меня довольно скудный портфолио у меня... как бы отсутствует. Да и знаний в области дизайна ещё маловато.</p>
